@@ -18,12 +18,10 @@ export default {
 
 <style scoped>
     #GHeader{
-        width:1311px;
         height: 82px;
         line-height: 82px;
-        position:absolute;
-        top: 0;
-        left: 175px;
+        min-width: 1311px;
+        background: #fff;
     }
     ul{
         float: right;

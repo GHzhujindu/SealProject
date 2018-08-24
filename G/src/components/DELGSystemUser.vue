@@ -1,5 +1,5 @@
 <template>
-  <div id="GJurisdiction">
+  <div id="GSystemUser">
       <el-container>
           <el-aside width="116px">
                 <div class="GSystemManagement_left">
@@ -23,20 +23,9 @@
           </el-aside>
           <el-main>
              <div class="GSystemManagement_right">
-                <table>
-                    <tr v-for=" i in 10">
-                        <td>编号</td>
-                        <td>角色名称</td>
-                        <td>角色描述</td>
-                        <td>操作</td>
-                        <td>编号</td>
-                        <td>角色名称</td>
-                        <td>角色描述</td>
-                        <td>操作</td>
-                    </tr>      
-                </table>
-            <g-paper />
-       </div>
+                <g-system-user-list />
+            
+            </div>
           </el-main>
     </el-container>
        
@@ -47,29 +36,31 @@
 
 <script>
 import GPaper from './GPaper'
+import GSystemUserList from './GSystemUserList'
 export default {
   data () {
     return {
     }
   },
   components: { 
-    GPaper
+    GPaper,
+    GSystemUserList
    }
 }
 </script>
 
 <style scoped>
-#GJurisdiction .el-main{
+#GSystemUser .el-main{
     padding: 0!important;
 }
-    #GJurisdiction{
+    #GSystemUser{
         width: 100%;
         min-height: 600px;
         min-width:1311px;
         margin: 0 auto;
         background: #E9EEF3;
     }
-    #GJurisdiction .el-aside {
+    #GSystemUser .el-aside {
         background-color: #E9EEF3;
         color: #333;
       }

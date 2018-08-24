@@ -1,16 +1,22 @@
 <template>
-  <div id="GJurisdiction">
+  <div id="GSystemUnit">
       <el-container>
           <el-aside width="116px">
                 <div class="GSystemManagement_left">
                     <ul>
                         <li>
-                            <div><img src="../assets/u113.png"></img></div>
-                            角色管理
+                            <router-link to="/GSystemUnit/GSystemUnitList">
+                                <div><img src="../assets/u113.png"></img></div>
+                                单位管理
+                            </router-link>
                         </li>
                         <li>
+                            <router-link to="/GSystemUnit/GSystemUserList">
+
                             <div><img src="../assets/u1303.png"></img></div>
-                            权限管理
+                            用户管理
+                            </router-link>
+
                         </li>
                     </ul>
                </div>
@@ -23,20 +29,11 @@
           </el-aside>
           <el-main>
              <div class="GSystemManagement_right">
-                <table>
-                    <tr v-for=" i in 10">
-                        <td>编号</td>
-                        <td>角色名称</td>
-                        <td>角色描述</td>
-                        <td>操作</td>
-                        <td>编号</td>
-                        <td>角色名称</td>
-                        <td>角色描述</td>
-                        <td>操作</td>
-                    </tr>      
-                </table>
-            <g-paper />
-       </div>
+                
+                    <router-view />
+              
+              
+            </div>
           </el-main>
     </el-container>
        
@@ -46,30 +43,28 @@
 </template>
 
 <script>
-import GPaper from './GPaper'
 export default {
   data () {
     return {
     }
   },
   components: { 
-    GPaper
    }
 }
 </script>
 
 <style scoped>
-#GJurisdiction .el-main{
+#GSystemUnit .el-main{
     padding: 0!important;
 }
-    #GJurisdiction{
+    #GSystemUnit{
         width: 100%;
         min-height: 600px;
         min-width:1311px;
         margin: 0 auto;
         background: #E9EEF3;
     }
-    #GJurisdiction .el-aside {
+    #GSystemUnit .el-aside {
         background-color: #E9EEF3;
         color: #333;
       }
@@ -143,4 +138,6 @@ export default {
         position: relative;
         top: 7px;
     }
+  
+
 </style>

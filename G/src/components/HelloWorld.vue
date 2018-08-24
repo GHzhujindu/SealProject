@@ -1,14 +1,27 @@
 <template>
     <div class="systermadministorOne">
-        <g-header />
-        <g-tabbar-left />
-        <div class="GContent"> <router-view /></div>
+        <el-container>
+          <el-aside width="175px">
+              <g-system-tab-bar />
+          </el-aside>
+          <el-container>
+            <el-header height="82px">
+              <g-header />
+            </el-header>
+            <div class="contents">
+              <el-main>
+                <router-view />
+              </el-main>
+            </div>
+          </el-container>
+        </el-container>
     </div>
 </template>
 
 <script>
 import GHeader from './GHeader'
 import GTabbarLeft from './GTabbarLeft'
+import GSystemTabBar from './GSystemTabBar'
 export default {
   name: 'HelloWorld',
   data () {
@@ -18,7 +31,8 @@ export default {
   },
   components: { 
     GHeader,
-    GTabbarLeft
+    GTabbarLeft,
+    GSystemTabBar
    }
 }
 </script>
@@ -41,31 +55,35 @@ a {
   color: #42b983;
   text-decoration: none;
 }
-    .systermadministorOne{
-        width: 100%;
-        height: 682px;
-        margin: 0 auto;
-    }
-    .systermadministorOne> div{
-        float: left;
-    }
-    .systermadministorOne_left{
-        width: 150px;
-        height: 100%;
-    }
-    .systermadministorOne_right{
-        width: 85%;
-        height: 100%;
-    }
-    .GContent{
-       position: absolute;
-        top: 82px;
-        left: 175px;
-        width:1311px;
-        height: 600px;
-        background: #e9f0f5;
-    }
+   
     table{
         border-collapse: collapse;
     }
+.contents{
+  min-width: 1311px;
+}
+  .el-header{
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #333333;
+    color: #333;
+  }
+
+  .el-main {
+    background-color: #E9EEF3;
+    color: #000;
+    padding:20px 0!important;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  
+  
 </style>

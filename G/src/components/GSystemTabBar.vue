@@ -1,10 +1,10 @@
 <template>
-  <div id="GTabbarLeft">
+  <div id="GSystemTabBar">
         <div class="GHeader"><img src="../assets/u46.png"></img></div>
         <ul>
-            <li><router-link to="/GSystemManagement"><img src="../assets/u13.png"></img>系统管理</router-link></li>
-            <li><router-link to="/GDaylyManage"><img src="../assets/u18.png">日志管理</router-link></li>
-            <li><router-link to="/GApproalSetup"><img src="../assets/u23.png">审批设置</router-link></li>
+            <li><router-link to="/GSystemUnit"><img src="../assets/u13.png"></img>系统管理</router-link></li>
+            <li><router-link to="/GSystemLogStamp"><img src="../assets/u18.png">日志管理</router-link></li>
+            <li><router-link to="/GSystemSetInterFace"><img src="../assets/u23.png">系统设置</router-link></li>
         </ul>
   </div>
 </template>
@@ -20,11 +20,11 @@ export default {
 </script>
 
 <style scoped>
-    #GTabbarLeft{
+    #GSystemTabBar{
         width: 175px;
-        height: 100%;
-        min-height:682px;
-        background: #333;    
+        height:682px;
+        position:absolute;
+        left:0;
     }
     .GHeader{
         width: 100%;
@@ -40,6 +40,8 @@ export default {
     }
     ul{
         width: 100%;
+        height: 600px;
+        background: #333333;
         color: #fff;
     }
     li{

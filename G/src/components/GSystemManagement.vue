@@ -15,7 +15,7 @@
         <div class="GSystemManagement_right">
             <div class="hi">
                 <el-row>
-                  <el-button type="info" plain>新建审批类型</el-button>
+                  <el-button type="info" plain>新建角色</el-button>
                 </el-row>
             </div>
             <el-table
@@ -24,21 +24,22 @@
                 :row-class-name="tableRowClassName">
                 <el-table-column
                   prop="date"
-                  label="日期"
+                  label="编号"
                   width="180">
                 </el-table-column>
                 <el-table-column
                   prop="name"
-                  label="姓名"
+                  label="角色名称"
                   width="180">
                 </el-table-column>
                 <el-table-column
                   prop="address"
-                  label="地址">
+                  label="角色描述">
                 </el-table-column>
                 <el-table-column
-                  prop="address"
-                  label="HHH">
+                  prop="address2"
+                  label="操作"
+                   width="180">
                 </el-table-column>
               </el-table>
 
@@ -65,46 +66,62 @@ export default {
     },
     data() {
       return {
+
         tableData2: [{
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          date: '01',
+          name: '安全审计管理员',
+          address: '安全审计管理员',
+          address2: '查看'
+
         }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
+          date: '02',
+          name: '系统管理员',
+          address: '系统管理员',
+          address2: '查看'
+
         }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          date: '03',
+          name: '安全管理保密员',
+          address: '安全管理保密员',
+          address2: '查看'
+
         },{
-          date: '2016-05-02',
+          date: '04',
+          name: '制章员',
+          address: '',
+          address2: '修改 删除'
+
+        }, {
+          date: '05',
+          name: '制章员',
+          address: '',
+          address2: '修改 删除'
+
+        }, {
+          date: '06',
+          name: 'd',
+          address: '上海市普陀区金沙江路 1518 弄',
+          address2: '修改 删除'
+
+        }, {
+          date: '07',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address2: '修改 删除'
         },{
-          date: '2016-05-02',
+          date: '08',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄',
+          address2: '修改 删除'
         }]
       }
     }
 }
 </script>
 
-<style scoped>
-.hi{
+<style>
+
+#GSystemManagement .hi{
     margin: 10px;
     width: 100%;
     height: 30px;
@@ -112,31 +129,35 @@ export default {
     padding-right: 20px;
     margin-bottom: 20px;
 }
-.hi  button{
+#GSystemManagement .hi  button{
     width: 155px;
     height: 40px;
-
+    background:#fff;
 }
-.hi  button span{
+#GSystemManagement .hi  button span{
     color: #000;
 }
- .GSystemManagement_right table tr{
+ #GSystemManagement  table tr{
   height: 53px;
   }
-  table  tbody tr:nth-of-type(odd){
+  #GSystemManagement  table tr td{
+    text-align:center;
+  }
+  #GSystemManagement table  tbody tr:nth-of-type(odd){
     background: #fff;
 
   }
-  table tbody tr:nth-of-type(even){
+ #GSystemManagement table tbody tr:nth-of-type(even){
     background: #fafafa;
     
   }
- .el-table .warning-row {
+ #GSystemManagement .el-table .warning-row {
   height:53px;
   }
-.has-gutter th{
+#GSystemManagement .has-gutter th{
     color: #000;
     font-weight: bold;
+    text-align:center;
 }
     #GSystemManagement{
         width: 100%;
@@ -145,20 +166,20 @@ export default {
     #GSystemManagement>div{
         float:left;
     }
-    .GSystemManagement_left{
+    #GSystemManagement .GSystemManagement_left{
         padding: 0 20px;
         text-align:center;
         height: 600px;
     }
-    .GSystemManagement_left>ul>li> div{
+    #GSystemManagement .GSystemManagement_left>ul>li> div{
        width: 76px;
        height: 76px;
        margin: 20px 0 5px 0;
     }
-    .GSystemManagement_left>ul>li> div>img{
+    #GSystemManagement .GSystemManagement_left>ul>li> div>img{
     margin-top: 3px;
     }
-    .GSystemManagement_right{
+    #GSystemManagement .GSystemManagement_right{
         width:1176px;
         heihgt: 100%;
         height: 600px;
